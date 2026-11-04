@@ -1,1 +1,10 @@
-{"name":"OncoViva","short_name":"OncoViva","start_url":"./","display":"standalone","background_color":"#f6f8f7","theme_color":"#123d36","icons":[]}
+{
+  "name": "OncoViva",
+  "short_name": "OncoViva",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8f7",
+  "theme_color": "#123d36",
+  "description": "DrNB Surgical Oncology question manager and practice app"
+}
