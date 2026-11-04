@@ -1,1 +1,3 @@
-const CACHE='oncoviva-v2';const FILES=['./','./index.html','./manifest.json'];self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
+// Intentionally no offline cache. Older registrations are removed by index.html.
+self.addEventListener('install', event => self.skipWaiting());
+self.addEventListener('activate', event => event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.map(k=>caches.delete(k)));await self.registration.unregister();})()));
